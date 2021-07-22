@@ -39,6 +39,10 @@ The data analyzed in Bradt (2019) and included in this replication repo are deri
 
 Additional information on the survey instrument and the data included in **`data/raw/data_raw.csv`** are available in the text of [Bradt (2019)](https://doi.org/10.1017/bpp.2019.31).
 
+## Reuse
+
+Please contact me before reusing any of the underlying data or resulting tables or figures contained in this repository.  Please cite to [Bradt (2019)](https://doi.org/10.1017/bpp.2019.31) when reusing these materials.
+
 ## Problems
 
 If you encounter any difficulties running the code or if you find any errors, please file an issue on this repo and I will look into it.

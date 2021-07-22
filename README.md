@@ -9,7 +9,7 @@ The entire analysis of Bradt (2019) can be executed by running the master script
 
 ```
 ## Run these commands in a shell
-git clone git@github.com:jtbradt/flood-insurance-bpp.git
+git clone https://github.com/jtbradt/flood-insurance-bpp
 cd flood-insurance-bpp
 Rscript R/replicate.R
 ```

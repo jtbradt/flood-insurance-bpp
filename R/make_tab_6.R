@@ -2,15 +2,11 @@
 #   FILENAME:   make_tab_6.R
 #   AUTHOR:     Jacob Bradt (jbradt@g.harvard.edu)
 
-# STEP 1: Load packages ---------------
-
-pacman::p_load(data.table, here, stargazer, stats, censReg, VGAM, dplyr)
-
-# STEP 2: Import processed data ---------------
+# STEP 1: Import processed data ---------------
 
 flood <- fread(here("data", "intermediate", "data_inter.csv"))
 
-# STEP 3: Estimate primary specification and fit summary objects ---------------
+# STEP 2: Estimate primary specification and fit summary objects ---------------
 
 #   Run primary specification: two-limit tobit
 m1 <- censReg(wtp ~ t1 + t2 + t3 + exp_flood + cc + pol + age + children + income + university + standalone + coastal, left = 0,  right = 125, data = flood)
@@ -37,7 +33,7 @@ lr_m1_2_psymbol <- pchisq(lr_m1_2, df = 3, lower.tail = FALSE) %>%
   as.character()
 lr_m1_2_print <- paste0(sprintf("%.3f", round(lr_m1_2, 3)),lr_m1_2_psymbol)
 
-# STEP 4: Construct Table 6 ---------------
+# STEP 3: Construct Table 6 ---------------
 
 #   Construct coefficient column:
 coefs <- c(m1_sum$estimate[2:13,1], m1_sum$estimate[1,1], exp(m1_sum$estimate[14, 1]))

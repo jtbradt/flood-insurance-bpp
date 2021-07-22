@@ -2,15 +2,11 @@
 #   FILENAME:   make_tab_5.R
 #   AUTHOR:     Jacob Bradt (jbradt@g.harvard.edu)
 
-# STEP 1: Load packages ---------------
-
-pacman::p_load(data.table, here, stargazer, stats)
-
-# STEP 2: Import processed data ---------------
+# STEP 1: Import processed data ---------------
 
 flood <- fread(here("data", "intermediate", "data_inter.csv"))
 
-# STEP 3: Calculate Tukey's HSD ---------------
+# STEP 2: Calculate Tukey's HSD ---------------
 
 #   Analysis of variance:
 res.aov <- aov(wtp ~ t, data = flood)
@@ -18,7 +14,7 @@ res.aov <- aov(wtp ~ t, data = flood)
 #   Tukey's HSD:
 tukey <- TukeyHSD(res.aov)
 
-# STEP 4: Construct Table 5 ---------------
+# STEP 3: Construct Table 5 ---------------
 
 #   Write Table 5 to .tex file
 stargazer(

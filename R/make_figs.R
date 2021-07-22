@@ -2,15 +2,11 @@
 #   FILENAME:   make_figs.R
 #   AUTHOR:     Jacob Bradt (jbradt@g.harvard.edu)
 
-# STEP 1: Load packages ---------------
-
-pacman::p_load(data.table, here, gplots, ggplot2, dplyr)
-
-# STEP 2: Import processed data ---------------
+# STEP 1: Import processed data ---------------
 
 flood <- fread(here("data", "intermediate", "data_inter.csv"))
 
-# STEP 3: Make figures ---------------
+# STEP 2: Make figures ---------------
 
 #   Figure 1:
 jpeg(here("results", "Figure1a.jpg"), width = 7, height = 5, units = 'in', res = 500)

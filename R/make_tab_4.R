@@ -2,15 +2,11 @@
 #   FILENAME:   make_tab_4.R
 #   AUTHOR:     Jacob Bradt (jbradt@g.harvard.edu)
 
-# STEP 1: Load packages ---------------
-
-pacman::p_load(data.table, here, stargazer)
-
-# STEP 2: Import processed data ---------------
+# STEP 1: Import processed data ---------------
 
 flood <- fread(here("data", "intermediate", "data_inter.csv"))
 
-# STEP 3: Construct Table 4 ---------------
+# STEP 2: Construct Table 4 ---------------
 
 #   Create matrix of WTI/WTP/CWTP (with std errors for WTP and CWTP) for full
 #   sample:

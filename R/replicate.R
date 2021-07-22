@@ -11,7 +11,16 @@
 ############################## FRONT MATTER ##############################
 
 #   Load packages:
-pacman::p_load(here)
+library(here)
+library(data.table)
+library(psych)
+library(dplyr)
+library(ggplot2)
+library(gplots)
+library(stargazer)
+library(stats)
+library(censReg)
+library(VGAM)
 
 #   Initialize top-level directory:
 i_am("R/replicate.R")

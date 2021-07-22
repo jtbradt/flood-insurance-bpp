@@ -46,3 +46,7 @@ If you encounter any difficulties running the code or if you find any errors, pl
 ## License
 
 The software code contained within this repository is made available under the [MIT license](http://opensource.org/licenses/mit-license.php). The data and figures are made available under the [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/) license.
+
+## README attribution
+
+This **`README.md`** is based on the README.md from a [replication repo](https://github.com/grantmcdermott/bycatch) owned by [Grant McDermott](https://github.com/grantmcdermott).

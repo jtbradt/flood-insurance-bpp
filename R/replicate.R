@@ -10,6 +10,9 @@
 #   of 'boosts' and 'nudges'" (link: https://doi.org/10.1017/bpp.2019.31).
 ############################## FRONT MATTER ##############################
 
+# renv::init()   ## Only necessary if you didn't clone/open the repo as an RStudio project
+renv::restore()  ## Enter "y" when prompted
+
 #   Load packages:
 library(here)
 library(data.table)
